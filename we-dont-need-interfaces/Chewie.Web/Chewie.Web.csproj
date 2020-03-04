@@ -52,6 +52,9 @@
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.Common.3.2.2.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
     </Reference>
@@ -139,10 +142,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\NoInterfaceController.cs" />
+    <Compile Include="Controllers\InterfacedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\TheServiceMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,11 +171,12 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\" />
     <Folder Include="fonts\" />
-    <Folder Include="Models\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\Interfaced\Index.cshtml" />
+    <Content Include="Views\NoInterface\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\service-lib\service-lib.csproj">

@@ -15,8 +15,8 @@ namespace ChewieConsole
             Kernel.Bind<IServiceA>().To<ServiceA>();
             Kernel.Bind<IServiceB>().To<ServiceB>();
 
-            Kernel.Bind<ServiceNoInterfaceA>().To<ServiceNoInterfaceA>();
-            Kernel.Bind<ServiceNoInterfaceB>().To<ServiceNoInterfaceB>();
+            Kernel.Bind<ServiceNoInterfaceA>().ToSelf();
+            Kernel.Bind<ServiceNoInterfaceB>().ToSelf();
 
             var serviceA = Kernel.Get<ServiceB>();
             var noInterfaceB = Kernel.Get<ServiceNoInterfaceB>();

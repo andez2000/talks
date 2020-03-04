@@ -6,6 +6,13 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
 </head>
 <body>
+
+    <div>
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("No Interface", "Index", "NoInterface")
+        @Html.ActionLink("With Interface", "Index", "Interfaced")
+    </div>
+
     @RenderBody()
     @RenderSection("scripts", required: false)
 </body>

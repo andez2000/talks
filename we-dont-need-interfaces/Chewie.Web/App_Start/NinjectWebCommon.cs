@@ -10,6 +10,7 @@ namespace Chewie.Web.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using ServicesLib.WithInterfaces;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +62,11 @@ namespace Chewie.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IServiceA>().To<ServiceA>();
+            kernel.Bind<IServiceB>().To<ServiceB>();
+
+            kernel.Bind<ServiceNoInterfaceA>().ToSelf();
+            kernel.Bind<ServiceNoInterfaceB>().ToSelf();
         }        
     }
 }
