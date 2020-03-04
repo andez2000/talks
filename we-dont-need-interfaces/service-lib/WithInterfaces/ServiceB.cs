@@ -1,4 +1,4 @@
-﻿namespace service_lib
+﻿namespace ServicesLib.WithInterfaces
 {
     public class ServiceB : IServiceB
     {

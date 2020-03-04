@@ -53,5 +53,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\service-lib\service-lib.csproj">
+      <Project>{b058d39d-cd69-4cc9-becd-d0193d012ed7}</Project>
+      <Name>service-lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

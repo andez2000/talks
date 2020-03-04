@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ServiceB.cs" />
-    <Compile Include="ServiceA.cs" />
+    <Compile Include="NoInterfaces\ServiceNoInterfaceA.cs" />
+    <Compile Include="NoInterfaces\ServiceNoInterfaceB.cs" />
+    <Compile Include="WithInterfaces\ServiceB.cs" />
+    <Compile Include="WithInterfaces\ServiceA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
